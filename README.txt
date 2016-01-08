@@ -3,6 +3,8 @@ This worked for Mac OSX:
 1) install cmake, ctags
 $ brew install ctags
 $ brew install cmake
+$ brew install vim
+# be sure to create an alias to avoid to use the native MacVim
 
 2) install .vim/ and .vimrc
 $ git clone https://github.com/dowhile0/dotvim
