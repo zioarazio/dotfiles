@@ -34,3 +34,9 @@ Click on Load Presets
 Click on Import
 Select the molokai.itermcolors file
 Click on Load Presets and choose a color scheme
+
+6) If vim should crash due to Python: Caught Deadly Signal ABRT
+you can try to launch vim in the following way
+$ DYLD_FORCE_FLAT_NAMESPACE=1 vim
+or create an alias in .bashrc
+alias vi='DYLD_FORCE_FLAT_NAMESPACE=1 vim'
