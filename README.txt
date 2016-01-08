@@ -6,6 +6,10 @@ $ brew install cmake
 $ brew install vim
 # be sure to create an alias to avoid to use the native MacVim
 
+1a) if you need to use tagbar with JS you need jsctags and it require to be installed from npm
+$ brew install npm
+$ npm install -g git+https://github.com/ramitos/jsctags.git
+
 2) install .vim/ and .vimrc
 $ git clone https://github.com/dowhile0/dotvim
 $ cd dotvim
