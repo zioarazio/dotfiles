@@ -23,3 +23,12 @@ git clone https://github.com/tomasr/molokai
 E484: Can't open file /var/folders/ ...
 put as first line in .vimrc the following
 set shell=/bin/bash
+
+5) if you want to use iterm2 with molokai color scheme:
+Launch iTerm 2.
+Type CMD+i (⌘+i)
+Navigate to Colors tab
+Click on Load Presets
+Click on Import
+Select the molokai.itermcolors file
+Click on Load Presets and choose a color scheme
