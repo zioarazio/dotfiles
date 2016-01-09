@@ -44,3 +44,8 @@ you can try to launch vim in the following way
 $ DYLD_FORCE_FLAT_NAMESPACE=1 vim
 or create an alias in .bashrc
 alias vi='DYLD_FORCE_FLAT_NAMESPACE=1 vim'
+
+7) install oh-my-zsh
+zsh --version (required 4.3.9 or more recent)
+$ sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+edit .zshrc
