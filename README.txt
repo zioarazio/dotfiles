@@ -27,7 +27,7 @@ put molokai.vim inside .vim/colors/
 4) if when using vim you will get the following error:
 E484: Can't open file /var/folders/ ...
 put as first line in .vimrc the following
-set shell=/bin/bash
+set shell=/bin/zsh
 
 5) if you want to use iterm2 with molokai color scheme:
 $ git clone https://github.com/mbadolato/iTerm2-Color-Schemes/tree/master/schemes
@@ -42,10 +42,12 @@ Click on Load Presets and choose a color scheme
 6) If vim should crash due to Python: Caught Deadly Signal ABRT
 you can try to launch vim in the following way
 $ DYLD_FORCE_FLAT_NAMESPACE=1 vim
-or create an alias in .bashrc
-alias vi='DYLD_FORCE_FLAT_NAMESPACE=1 vim'
+or create an alias in .zshrc
+alias vi="DYLD_FORCE_FLAT_NAMESPACE=1 vim"
 
 7) install oh-my-zsh
 zsh --version (required 4.3.9 or more recent)
 $ sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 edit .zshrc
+plugins: git osx sudo brew aws battery
+theme: obraun
