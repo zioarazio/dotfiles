@@ -53,5 +53,5 @@ to install 'zsh-syntax-highlighting':
 $ git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 remember that 'zsh-syntax-highlighting' must be the last plugin on the list
 edit .zshrc
-plugins: git osx sudo brew aws colored-man colorize zsh-syntax-highlighting)
+plugins: git osx sudo brew aws colored-man-pages colorize zsh-syntax-highlighting)
 theme: obraun
