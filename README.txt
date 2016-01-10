@@ -1,4 +1,5 @@
-This worked for Mac OSX:
+LIST OF STEPS TO PREPARE MY HOME DOTFILES
+(This worked for Mac OSX)
 
 1) install cmake, ctags
 $ brew install ctags
@@ -48,6 +49,9 @@ alias vi="DYLD_FORCE_FLAT_NAMESPACE=1 vim"
 7) install oh-my-zsh
 zsh --version (required 4.3.9 or more recent)
 $ sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+to install 'zsh-syntax-highlighting':
+$ git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+remember that 'zsh-syntax-highlighting' must be the last plugin on the list
 edit .zshrc
-plugins: git osx sudo brew aws battery
+plugins: git osx sudo brew aws colored-man colorize zsh-syntax-highlighting)
 theme: obraun
