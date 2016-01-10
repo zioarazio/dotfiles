@@ -1,13 +1,38 @@
 LIST OF STEPS TO PREPARE MY HOME DOTFILES
 (This worked for Mac OSX)
 
-1) install cmake, ctags
+### Install iTerm2:
+if you want to use iterm2 with molokai color scheme:
+$ git clone https://github.com/mbadolato/iTerm2-Color-Schemes/tree/master/schemes
+Launch iTerm 2.
+Type CMD+i (⌘+i)
+Navigate to Colors tab
+Click on Load Presets
+Click on Import
+Select the molokai.itermcolors file
+Click on Load Presets and choose a color scheme
+
+### Install oh-my-zsh
+zsh --version (required 4.3.9 or more recent)
+$ sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+to install 'zsh-syntax-highlighting':
+$ git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+remember that 'zsh-syntax-highlighting' must be the last plugin on the list
+colorize requires pygmentize:
+$ pip install Pygments
+edit .zshrc
+plugins: git osx sudo brew aws colored-man-pages colorize zsh-syntax-highlighting
+theme: obraun
+
+### Configure Vim 
+1) install cmake, ctags <-- required for tagbar
 $ brew install ctags
 $ brew install cmake
 $ brew install vim
 # be sure to create an alias to avoid to use the native MacVim
 
-1a) if you need to use tagbar with JS you need jsctags and it require to be installed from npm
+### This never worked for me
+if you need to use tagbar with JS you need jsctags and it require to be installed from npm
 $ brew install npm
 $ npm install -g git+https://github.com/ramitos/jsctags.git
 
@@ -22,38 +47,18 @@ $ cd YouCompleteMe
 $ ./install.py --clang-completer
 
 3) install molokai color set
-$ git clone https://github.com/tomasr/molokai
+$ git clone https://github.com/tomasr/molokai .vim/colors/
 put molokai.vim inside .vim/colors/
 
-4) if when using vim you will get the following error:
+### Errors
+If when using vim you will get the following error:
 E484: Can't open file /var/folders/ ...
 put as first line in .vimrc the following
 set shell=/bin/zsh
 
-5) if you want to use iterm2 with molokai color scheme:
-$ git clone https://github.com/mbadolato/iTerm2-Color-Schemes/tree/master/schemes
-Launch iTerm 2.
-Type CMD+i (⌘+i)
-Navigate to Colors tab
-Click on Load Presets
-Click on Import
-Select the molokai.itermcolors file
-Click on Load Presets and choose a color scheme
-
-6) If vim should crash due to Python: Caught Deadly Signal ABRT
+If vim should crash due to Python: Caught Deadly Signal ABRT
 you can try to launch vim in the following way
-$ DYLD_FORCE_FLAT_NAMESPACE=1 vim
-or create an alias in .zshrc
+$ DYLD_FORCE_FLAT_NAMESPACE=1 vim (if it works create an alias in .zshrc)
 alias vi="DYLD_FORCE_FLAT_NAMESPACE=1 vim"
 
-7) install oh-my-zsh
-zsh --version (required 4.3.9 or more recent)
-$ sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-to install 'zsh-syntax-highlighting':
-$ git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-remember that 'zsh-syntax-highlighting' must be the last plugin on the list
-colorize requires pygmentize:
-$ pip install Pygments
-edit .zshrc
-plugins: git osx sudo brew aws colored-man-pages colorize zsh-syntax-highlighting)
-theme: obraun
+
