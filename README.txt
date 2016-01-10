@@ -52,6 +52,8 @@ $ sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/insta
 to install 'zsh-syntax-highlighting':
 $ git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 remember that 'zsh-syntax-highlighting' must be the last plugin on the list
+colorize requires pygmentize:
+$ pip install Pygments
 edit .zshrc
 plugins: git osx sudo brew aws colored-man-pages colorize zsh-syntax-highlighting)
 theme: obraun
