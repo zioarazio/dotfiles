@@ -50,6 +50,15 @@ $ ./install.py --clang-completer
 $ git clone https://github.com/tomasr/molokai .vim/colors/
 put molokai.vim inside .vim/colors/
 
+4) install correct fonts for bling/vim-airliner
+git clone https://github.com/powerline/fonts
+cd fonts
+./install.sh
+Modify iTerm2 configuration to enable new fonts:
+Go to profiles -> Default -> Terminal -> Check silence bell
+Change the cursor text and cursor color to red/yellow make it more visible
+Change the font to 14pt Source Code Pro / Sauce Code.
+
 ### Errors
 If when using vim you will get the following error:
 E484: Can't open file /var/folders/ ...
