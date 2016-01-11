@@ -11,6 +11,7 @@ Click on Load Presets
 Click on Import
 Select the molokai.itermcolors file
 Click on Load Presets and choose a color scheme
+Change the cursor text and cursor color to red/yellow make it more visible
 
 ### Install oh-my-zsh
 zsh --version (required 4.3.9 or more recent)
