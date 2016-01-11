@@ -61,4 +61,24 @@ you can try to launch vim in the following way
 $ DYLD_FORCE_FLAT_NAMESPACE=1 vim (if it works create an alias in .zshrc)
 alias vi="DYLD_FORCE_FLAT_NAMESPACE=1 vim"
 
+### irssi
+If you are presented with an error regarding SSL certs, you are missing the curl-ca-bundle package. You can execute the following script on your host to fix the issue. After running the script close, then re-open irssi
 
+For a Mac, use the following:
+
+#!/bin/bash
+# Taken from https://gist.github.com/1stvamp/2158128
+mkdir /tmp/curl-ca-bundle
+cd /tmp/curl-ca-bundle
+wget http://curl.haxx.se/download/curl-7.22.0.tar.bz2
+tar jxf curl-7.22.0.tar.bz2
+cd curl-7.22.0/lib/
+./mk-ca-bundle.pl
+if [ ! -d /usr/share/curl/ ]; then
+	sudo mkdir -p /usr/share/curl/
+else
+	sudo mv /usr/share/curl/ca-bundle.crt /usr/share/curl/ca-bundle.crt.original
+fi
+sudo mv ca-bundle.crt /usr/share/curl/ca-bundle.crt
+echo
+echo "Done!"
