@@ -32,6 +32,14 @@ $ brew install cmake
 $ brew install vim
 # be sure to create an alias to avoid to use the native MacVim
 
+# Install VimCat
+$ brew install vimpager
+In your ~/.zshrc add the following:
+
+export PAGER=/usr/local/bin/vimpager
+alias less=$PAGER
+alias zless=$PAGER
+
 ### This never worked for me
 if you need to use tagbar with JS you need jsctags and it require to be installed from npm
 $ brew install npm
