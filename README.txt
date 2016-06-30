@@ -55,6 +55,9 @@ $ cd bundle
 $ cd YouCompleteMe
 $ ./install.py --clang-completer
 
+# Compile color_coded << plugin for vim
+https://github.com/jeaye/color_coded
+
 3) install molokai color set
 $ git clone https://github.com/tomasr/molokai .vim/colors/
 put molokai.vim inside .vim/colors/
